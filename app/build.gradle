@@ -55,6 +55,9 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
+    
+    // Guava dependency to fix ListenableFuture issue with CameraX
+    implementation 'com.google.guava:guava:31.1-android'
 
     // AdMob
     implementation 'com.google.android.gms:play-services-ads:23.0.0'
