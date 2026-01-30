@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">الأدوات الذكية</string>
+    <string name="ocr_title">مستخرج النصوص (OCR)</string>
+    <string name="qr_title">ماسح الرمز</string>
+    <string name="pdf_title">محول الصور إلى PDF</string>
+    <string name="capture_image">التقاط صورة</string>
+    <string name="detect_text">استخراج النص</string>
+    <string name="select_image">اختر صورة</string>
+    <string name="convert_pdf">تحويل إلى PDF</string>
+    <string name="scan_qr">مسح رمز QR</string>
+    <string name="permission_required">مطلوب إذن الكاميرا</string>
+    <string name="pdf_saved">تم حفظ PDF في المستندات</string>
+    <string name="error">حدث خطأ</string>
+    <string name="ocr_result_placeholder">سيظهر النص المستخرج هنا...</string>
+    <string name="qr_instruction">وجه الكاميرا نحو رمز QR</string>
+    <string name="copy_text">نسخ</string>
+</resources>

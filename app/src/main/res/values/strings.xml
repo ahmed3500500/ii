@@ -11,4 +11,7 @@
     <string name="permission_required">Camera permission is required</string>
     <string name="pdf_saved">PDF Saved to Documents</string>
     <string name="error">Error occurred</string>
+    <string name="ocr_result_placeholder">Detected text will appear here...</string>
+    <string name="qr_instruction">Point camera at a QR code</string>
+    <string name="copy_text">Copy</string>
 </resources>

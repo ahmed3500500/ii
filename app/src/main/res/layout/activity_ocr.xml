@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Detected text will appear here..." />
+                android:text="@string/ocr_result_placeholder" />
         </ScrollView>
     </LinearLayout>
 
