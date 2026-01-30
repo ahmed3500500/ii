@@ -49,6 +49,25 @@ class OcrActivity : AppCompatActivity() {
         binding = ActivityOcrBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Handle Back Press to show Interstitial Ad
+        onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (interstitialAd != null) {
+                    interstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+                        override fun onAdDismissedFullScreenContent() {
+                            finish()
+                        }
+                        override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                            finish()
+                        }
+                    }
+                    interstitialAd?.show(this@OcrActivity)
+                } else {
+                    finish()
+                }
+            }
+        })
+
         // Load Banner Ad
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)
@@ -70,8 +89,8 @@ class OcrActivity : AppCompatActivity() {
 
     private fun loadInterstitialAd() {
         val adRequest = AdRequest.Builder().build()
-        // Test ID for Interstitial
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+        // Load Interstitial ID from resources
+        InterstitialAd.load(this, getString(R.string.interstitial_ad_unit_id), adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     interstitialAd = null

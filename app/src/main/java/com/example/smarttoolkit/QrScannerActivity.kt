@@ -47,6 +47,25 @@ class QrScannerActivity : AppCompatActivity() {
         binding = ActivityQrScannerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Handle Back Press to show Interstitial Ad
+        onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (interstitialAd != null) {
+                    interstitialAd?.fullScreenContentCallback = object : com.google.android.gms.ads.FullScreenContentCallback() {
+                        override fun onAdDismissedFullScreenContent() {
+                            finish()
+                        }
+                        override fun onAdFailedToShowFullScreenContent(adError: com.google.android.gms.ads.AdError) {
+                            finish()
+                        }
+                    }
+                    interstitialAd?.show(this@QrScannerActivity)
+                } else {
+                    finish()
+                }
+            }
+        })
+
         // Load Ads
         binding.adView.loadAd(AdRequest.Builder().build())
         loadInterstitialAd()
@@ -73,7 +92,7 @@ class QrScannerActivity : AppCompatActivity() {
 
     private fun loadInterstitialAd() {
         val adRequest = AdRequest.Builder().build()
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this, getString(R.string.interstitial_ad_unit_id), adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     interstitialAd = null
