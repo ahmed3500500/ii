@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@id/adView">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOcr"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/ocr_title"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            app:cornerRadius="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnQr"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/qr_title"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            app:cornerRadius="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPdf"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/pdf_title"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            app:cornerRadius="16dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

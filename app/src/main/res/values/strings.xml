@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Smart Tool Kit</string>
+    <string name="ocr_title">Text Scanner (OCR)</string>
+    <string name="qr_title">QR Scanner</string>
+    <string name="pdf_title">Image to PDF</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="detect_text">Detect Text</string>
+    <string name="select_image">Select Image</string>
+    <string name="convert_pdf">Convert to PDF</string>
+    <string name="scan_qr">Scan QR Code</string>
+    <string name="permission_required">Camera permission is required</string>
+    <string name="pdf_saved">PDF Saved to Documents</string>
+    <string name="error">Error occurred</string>
+</resources>
