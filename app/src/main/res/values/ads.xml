@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 
-    IMPORTANT: REPLACE THESE IDs WITH YOUR REAL ADMOB IDs BEFORE PUBLISHING 
+    REAL ADMOB IDs FOR PRODUCTION
     -->
     
-    <!-- App ID: Found in AdMob Console under App Settings -->
-    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <!-- App ID -->
+    <string name="admob_app_id">ca-app-pub-2178375198571412~1274910722</string>
 
-    <!-- Banner Ad Unit ID: Create a Banner unit in AdMob -->
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!-- Banner Ad Unit ID -->
+    <string name="banner_ad_unit_id">ca-app-pub-2178375198571412/1853495227</string>
 
-    <!-- Interstitial Ad Unit ID: Create an Interstitial unit in AdMob -->
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!-- Interstitial Ad Unit ID -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-2178375198571412/3396503571</string>
 </resources>
